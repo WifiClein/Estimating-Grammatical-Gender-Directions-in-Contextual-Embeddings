@@ -4,29 +4,31 @@ This repository contains code and result tables for estimating grammatical gende
 
 Large embedding files are not stored in this GitHub repository. They will be released separately via Hugging Face Datasets.
 
-## Reproduction pipeline
+## Repository structure
 
-After downloading the embedding data, run:
-
-```bash
-python scripts/01_run_full_cv_12_methods.py
-python scripts/02_summarize_results.py
-python scripts/03_external_semantic_eval_4_centroids.py
-python scripts/04_generate_latex_tables.py
-python scripts/05_generate_weight_sensitivity_table.py
+```text
+scripts/
 results/tables/
+requirements.txt
+README.md
+Data
+
+The expected embedding data structure is:
 data/embeddings/french/french_camembert/
 data/embeddings/french/multilingual_mbert/
 data/embeddings/french/multilingual_xlmr/
 data/embeddings/spanish/spanish_beto/
 data/embeddings/spanish/multilingual_mbert/
 data/embeddings/spanish/multilingual_xlmr/
+Reproduction pipeline
 
-### 2. 创建 requirements.txt
+After downloading and extracting the embedding data, run:
+python scripts/01_run_full_cv_12_methods.py
+python scripts/02_summarize_results.py
+python scripts/03_external_semantic_eval_4_centroids.py
+python scripts/04_generate_latex_tables.py
+python scripts/05_generate_weight_sensitivity_table.py
+Main outputs
 
-```bash
-cat > requirements.txt <<'EOF'
-numpy
-pandas
-scikit-learn
-scipy
+The main result tables are stored in:
+results/tables/
