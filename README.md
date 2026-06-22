@@ -1,4 +1,4 @@
-# Semantic-Bias-Aware Estimation of Grammatical Gender Directions in Contextual Embeddings
+# Estimating Grammatical Gender Directions in Contextual Embeddings under Controlled and Natural Contexts
 
 This repository contains code and result tables for estimating grammatical gender directions in Spanish and French contextual embeddings under contextual semantic contamination.
 
