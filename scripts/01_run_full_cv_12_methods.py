@@ -11,9 +11,12 @@ warnings.filterwarnings("ignore")
 # ============================================================
 # PATHS
 # ============================================================
-ROOT = Path("/root/autodl-tmp/fin")
-EMB_ROOT = ROOT / "data" / "embeddings"
-OUT_ROOT = ROOT / "results" / "full_cv_12_methods"
+from config import (
+    EMB_ROOT,
+    FULL_CV_RESULTS_DIR,
+)
+
+OUT_ROOT = FULL_CV_RESULTS_DIR
 OUT_ROOT.mkdir(parents=True, exist_ok=True)
 
 OUT_PATH = OUT_ROOT / "full_cv_12_methods_fold_results.csv"

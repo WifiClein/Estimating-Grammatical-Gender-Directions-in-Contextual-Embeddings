@@ -1,16 +1,15 @@
 from pathlib import Path
 import pandas as pd
 
-ROOT = Path("/root/autodl-tmp/fin")
-TABLE_DIR = ROOT / "results" / "tables"
-
-CENTROID_CSV = TABLE_DIR / "centroid_methods_only.csv"
-ESTIMATOR_CSV = TABLE_DIR / "estimator_overall_comparison.csv"
-EXTERNAL_CSV = TABLE_DIR / "external_semantic_4_centroids_summary.csv"
-
-CENTROID_TEX = TABLE_DIR / "centroid_methods_only.tex"
-ESTIMATOR_TEX = TABLE_DIR / "estimator_overall_comparison.tex"
-EXTERNAL_TEX = TABLE_DIR / "external_semantic_stability.tex"
+from config import (
+    TABLE_DIR,
+    CENTROID_CSV,
+    ESTIMATOR_CSV,
+    EXTERNAL_CSV,
+    CENTROID_TEX,
+    ESTIMATOR_TEX,
+    EXTERNAL_TEX,
+)
 
 
 def fmt3(x):

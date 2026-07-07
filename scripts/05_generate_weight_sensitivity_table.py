@@ -1,14 +1,24 @@
-from pathlib import Path
 import pandas as pd
 
-ROOT = Path("/root/autodl-tmp/fin")
-TABLE_DIR = ROOT / "results" / "tables"
+from config import (
+    CENTROID_CSV,
+    WEIGHT_SENS_CSV,
+    WEIGHT_SENS_SUMMARY_CSV,
+    WEIGHT_SENS_TEX,
+)
 
-IN_PATH = TABLE_DIR / "centroid_methods_only.csv"
 
-OUT_CSV = TABLE_DIR / "weight_sensitivity_analysis.csv"
-OUT_SUMMARY_CSV = TABLE_DIR / "weight_sensitivity_analysis_summary.csv"
-OUT_TEX = TABLE_DIR / "weight_sensitivity_analysis.tex"
+# ============================================================
+# PATHS FROM CONFIG
+# ============================================================
+
+IN_PATH = CENTROID_CSV
+
+OUT_CSV = WEIGHT_SENS_CSV
+
+OUT_SUMMARY_CSV = WEIGHT_SENS_SUMMARY_CSV
+
+OUT_TEX = WEIGHT_SENS_TEX
 
 
 def fmt_delta(x):

@@ -1,16 +1,31 @@
-from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path("/root/autodl-tmp/fin")
-EMB_ROOT = ROOT / "data" / "embeddings"
-OUT_DIR = ROOT / "results" / "tables"
-OUT_DIR.mkdir(parents=True, exist_ok=True)
+from config import (
+    EMB_ROOT,
+    TABLE_DIR,
+)
 
-OUT_PATH = OUT_DIR / "external_semantic_4_centroids.csv"
+
+# ============================================================
+# PATHS FROM CONFIG
+# ============================================================
+
+OUT_DIR = TABLE_DIR
+
+OUT_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
+
+OUT_PATH = (
+    OUT_DIR /
+    "external_semantic_4_centroids.csv"
+)
+
 
 EPS = 1e-12
-
 
 def l2(x):
     return x / (np.linalg.norm(x, axis=-1, keepdims=True) + EPS)
