@@ -48,11 +48,11 @@ tar -xzf data_release/embeddings.tar.gz
 
 2)After downloading and extracting the embedding data, run:
 pip install -r requirements.txt
-python scripts/01_run_full_cv_12_methods.py
-python scripts/02_summarize_results.py
-python scripts/03_external_semantic_eval_4_centroids.py
-python scripts/04_generate_latex_tables.py
-python scripts/05_generate_weight_sensitivity_table.py
+python scripts/experiment1_full_12_methods.py
+python scripts/summarize_results.py
+python scripts/external_eval_centroids.py
+python scripts/generate_latex_tables.py
+python scripts/generate_weight_sensitivity_table.py
 
 3)The main result tables are stored in:
 results/tables/
