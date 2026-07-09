@@ -109,7 +109,6 @@ def run_one_model(lang, model_dir):
 
     # 四种 centroid grammatical directions
     # weighted 版本这里先用同一个 centroid 方向占位。
-    # 如果你要严格复现 weighted，需要从 CV fold 内部计算 contamination weights。
     directions = {
         "Controlled-unweighted": centroid_direction(con_emb, y),
         "Natural-unweighted": centroid_direction(nat_emb, y),
