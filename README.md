@@ -1,4 +1,4 @@
-# Estimating Grammatical Gender Directions in Contextual Embeddings under Controlled and Natural Contexts
+# Pipeline
 
 This repository contains code and result tables for estimating grammatical gender directions in Spanish and French contextual embeddings under contextual semantic contamination.
 
